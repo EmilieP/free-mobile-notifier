@@ -24,7 +24,7 @@ Notifier.prototype.send = function (msg, callback) {
 	};
 
 	var options = url.parse(Notifier.apiUrl+'?'+querystring.stringify(data));
-	options.cert = fs.readFileSync(path.join(__dirname, 'freemobile.crt'));
+	// options.cert = fs.readFileSync(path.join(__dirname, 'freemobile.crt'));
 	options.rejectUnauthorized = false;
 
 	try {
